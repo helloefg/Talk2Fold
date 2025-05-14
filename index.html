@@ -78,7 +78,7 @@
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
           <p>
-            Enabling robots to follow spoken instructions for cloth manipulation is a critical step toward intuitive human-robot interaction in real-world settings. However, this task remains challenging due to the deformable nature of fabric and the need for accurate, language-grounded control. In this work, we focus on speech-driven cloth folding, a task that demands both long-horizon reasoning and fine-grained visual grounding. We propose a unified framework that integrates an Automatic Speech Recognition (ASR) module, a Large Language Model (LLM)-based planner, a Vision-Language Model (VLM)-based perception system, and a task execution module. Spoken instructions are first transcribed into text via the ASR module, and then parsed into structured sub-tasks by the LLM-based planner. For visual grounding, we utilize a frozen SigLIP2 encoder augmented with a bidirectional cross-attention fusion module, aligning textual instructions with RGB-D visual input. The task execution module sequentially executes the generated sub-tasks to complete multi-step cloth folding. To specialize our model for cloth manipulation tasks, we introduce Denoising Randomized Adaptation (DoRA), a lightweight fine-tuning strategy for enhanced generalization. To validate our approach, various cloth folding evaluations have been performed from simulation to real robot implementation. In simulation, our method outperforms state-of-the-art baselines, achieving improvements of 2.23\%, 1.87\%, and 33.3\% on seen instructions, unseen instructions, and unseen tasks respectively. On a real robot, our method successfully executes multi-step folding sequences guided by spoken instructions, across a wide range of cloth materials and configurations.
+            Enabling robots to follow spoken instructions for cloth manipulation is a critical step toward intuitive human-robot interaction in real-world settings. However, this task remains challenging due to the deformable nature of fabric and the need for accurate, language-grounded control. In this work, we focus on speech-driven cloth folding, a task that demands both long-horizon reasoning and fine-grained visual grounding. We propose a unified framework that integrates an Automatic Speech Recognition (ASR) module, a Large Language Model (LLM)-based planner, a Vision-Language Model (VLM)-based perception system, and a task execution module. Spoken instructions are first transcribed into text via the ASR module, and then parsed into structured sub-tasks by the LLM-based planner. For visual grounding, we utilize a frozen SigLIP2 encoder augmented with a bidirectional cross-attention fusion module, aligning textual instructions with RGB-D visual input. The task execution module sequentially executes the generated sub-tasks to complete multi-step cloth folding. To specialize our model for cloth manipulation tasks, we introduce Denoising Randomized Adaptation (DoRA), a lightweight fine-tuning strategy for enhanced generalization. To validate our approach, various cloth folding evaluations have been performed from simulation to real robot implementation. In simulation, our method outperforms state-of-the-art baselines, achieving improvements of 2.23%, 1.87%, and 33.3% on seen instructions, unseen instructions, and unseen tasks respectively. On a real robot, our method successfully executes multi-step folding sequences guided by spoken instructions, across a wide range of cloth materials and configurations.
 
           </p>
         </div>
@@ -96,7 +96,7 @@
       <h2 class="title is-3">Approach Overview</h2>
 
       <div class="has-text-centered">
-        <img style="width: 100%;" src="./static/images/fig1.jpg">
+        <img style="width: 100%;" src="./static/images/overview.jpg">
       </div>
 	  <p>
 		Fig. 1. An illustration of the robotic-arm embodied LLM system in the physical world, showcasing the integrated workflow of Automatic Speech Recognition,Task Planning, Visual Perception, and Action Execution in a cloth manipulation task.
@@ -117,7 +117,7 @@
         <img style="width: 100%;" src="./static/images/net.jpg">
       </div>
 	  <p>
-Fig. 2. The Visual Perception module uses a frozen SigLIP2 model to extract tokens from an RGBD image and a natural language instruction. The instruction is split at the conjunction ``and'' into pick and place segments. Each segment is fused with visual tokens via bidirectional cross-attention, where textual and visual features are jointly aligned. To adapt the frozen SigLIP2 model to cloth manipulation, DoRA is employed for efficient fine-tuning. The fused features are decoded through convolutional and upsampling layers to predict the corresponding pick and place positions for precise cloth manipulation.
+Fig. 2. The Visual Perception module uses a frozen SigLIP2 model to extract tokens from an RGBD image and a natural language instruction. The instruction is split at the conjunction and into pick and place segments. Each segment is fused with visual tokens via bidirectional cross-attention, where textual and visual features are jointly aligned. To adapt the frozen SigLIP2 model to cloth manipulation, DoRA is employed for efficient fine-tuning. The fused features are decoded through convolutional and upsampling layers to predict the corresponding pick and place positions for precise cloth manipulation.
 	  </p>
     </div>
   </div>
@@ -233,7 +233,7 @@ Fig. 2. The Visual Perception module uses a frozen SigLIP2 model to extract toke
 	
 	<!-- 添加子标题 -->
 	<div style="width: 100%; margin-bottom: 20px;">
-		<h3 class="subtitle is-4">4. Performance on Double Straight Fold<span style="font-weight: bold; color: red;">(DSF)</span> on Various Towels.</h3>
+		<h3 class="subtitle is-4">4. Performance on Double Straight Fold <span style="font-weight: bold; color: red;">(DSF)</span> on Various Towels.</h3>
 	</div>
 	
 	<!-- 第一列视频，添加右侧间隔 -->
